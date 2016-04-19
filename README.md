@@ -4,7 +4,6 @@ UI themes inspired by [iA Writer](https://ia.net/writer/mac/)
 Recommended Sublime Text settings:
 ```json
 {
-	"always_show_minimap_viewport": true,
 	"bold_folder_labels": true,
 	"caret_extra_bottom": 4,
 	"caret_extra_top": 4,
