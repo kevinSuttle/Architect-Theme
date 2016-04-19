@@ -48,7 +48,6 @@ Recommended Sublime Text settings:
 	"scroll_past_end": false,
 	"scroll_speed": 0.8,
 	"shift_tab_unindent": true,
-	"soda_folder_icons": true,
 	"tab_size": 2,
 	"trim_trailing_white_space_on_save": true,
 	"use_simple_full_screen": true,
