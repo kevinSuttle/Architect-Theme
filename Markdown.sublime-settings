@@ -1,0 +1,88 @@
+{
+    // Credit: https://github.com/SublimeText-Markdown/MarkdownEditing/blob/master/Markdown.sublime-settings
+    "extensions":
+    [
+    "md",
+    "mdown",
+    "txt"
+    ],
+
+    "color_scheme": "Packages/User/Theme - Architect/Architect.tmTheme",
+    "tab_size": 2,
+    "trim_trailing_white_space_on_save": false,
+    "auto_match_enabled": true,
+
+    "spell_check": true,
+    "dictionary": "Packages/Language - English/en_US.dic",
+
+    // Layout
+    "draw_centered": true,
+    "line_padding_top": 3,
+    "line_padding_bottom": 3,
+    "word_wrap": true,
+    "wrap_width": 80,
+    "rulers": [],
+
+    // add trailing #'s to headlines
+    "mde.match_header_hashes": false,
+
+    // Automatically switches list bullet when indenting blank list item with <Tab>.
+    "mde.list_indent_auto_switch_bullet": true,
+
+    // List bullets to be used for automatically switching. In their order.
+    "mde.list_indent_bullets": ["*", "-", "+"],
+
+    // Auto increments ordered list number. Set to false if you want always "1".
+    "mde.auto_increment_ordered_list_number": true,
+
+    // Always keep current line vertically centered.
+    "mde.keep_centered": false,
+
+    // Distraction free mode improvements. In order for these to work, you have to install
+    // FullScreenStatus plugin: https://github.com/maliayas/SublimeText_FullScreenStatus
+    "mde.distraction_free_mode": {
+        "mde.keep_centered": true
+        },
+
+        "mde.lint": {
+        // disabled rules, e.g. "md001".
+        "disable": ["md013"],
+        // Options:
+        //      atx,        ## title    only
+        //      atx_closed, ## title ## only
+        //      setext,     title       only
+        //                  =====
+        //      any,        consistent within the document
+        "md003": "any",
+        // Options:
+        //      asterisk,   * only
+        //      plus,       + only
+        //      dash,       - only
+        //      cyclic,     different symbols on different levels
+        //                  and same symbol on same level
+        //      single,     same symbol on different levels
+        //      any,        same symbol on same level
+        "md004": "cyclic",
+        // Number of spaces per list indent. Set to 0 to use Sublime tab_size instead
+        "md007": 0,
+        // Maximum line length, Set to 0 to use Sublime wrap_width instead
+        "md013": 0,
+        // Disallowed trailing punctuation in headers
+        "md026": ".,;:!",
+        // Options:
+        //      one,        '1.' only
+        //      ordered,    ascending number
+        //      any,        consistent within one list
+        "md029": "any",
+        // Number of spaces after list markers depending on list type.
+        // (ordered vs unordered, single-line vs multi-line)
+        "md030": {
+            "ul_single": 1,
+            "ol_single": 1,
+            // optinally, 3
+            "ul_multi": 1,
+            // optionaly, 2
+            "ol_multi": 1
+        }
+    }
+}
