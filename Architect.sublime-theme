@@ -126,26 +126,6 @@
         "font.bold": true,
         "color": [33, 194, 245],
     },
-    // Sidebar folder closed
-      {
-        "class": "icon_folder",
-        "layer0.texture": "",
-        "layer0.opacity": 0.0,
-        "content_margin": [0, 0]
-    },
-    // Sidebar folder toggled closed
-    {
-        "class": "disclosure_button_control",
-        "content_margin": [8, 8],
-        "layer0.texture": "Architect-Theme/assets/group-closed@2x.png",
-        "layer0.opacity": 1.0,
-        "layer0.inner_margin": 0
-    },
-    {
-        "class": "disclosure_button_control",
-        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "layer0.texture": "Architect-Theme/assets/group-closed-hover@2x.png"
-    },
     // Sidebar file close button
     {
         "class": "close_button",
@@ -172,6 +152,31 @@
         "layer0.opacity": 1.0,
         "layer0.texture": "Architect-Theme/assets/file-close-hover@2x.png",
     },
+      // Sidebar folder closed
+      {
+        "class": "icon_folder",
+        "layer0.texture": "",
+        "layer0.opacity": 0.0,
+        "content_margin": [0, 0]
+    },
+    // Sidebar folder toggled closed
+    {
+        "class": "disclosure_button_control",
+        "content_margin": [8, 8],
+        "layer0.texture": "Architect-Theme/assets/group-closed@2x.png",
+        "layer0.opacity": 1.0,
+        "layer0.inner_margin": 0
+    },
+    {
+        "class": "disclosure_button_control",
+        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "layer0.texture": "Architect-Theme/assets/group-closed@2x.png"
+    },
+    {
+        "class": "disclosure_button_control",
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
+        "layer0.texture": "Architect-Theme/assets/group-closed-hover@2x.png"
+    },
      // Sidebar folder open
     {
         "class": "disclosure_button_control",
@@ -183,11 +188,6 @@
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
         "layer0.texture": "Architect-Theme/assets/group-open-hover@2x.png"
-    },
-    {
-        "class": "disclosure_button_control",
-        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.texture": "Architect-Theme/assets/group-closed-selected@2x.png"
     },
     {
         "class": "disclosure_button_control",
