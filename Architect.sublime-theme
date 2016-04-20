@@ -159,7 +159,7 @@
         "layer0.opacity": 0.0,
         "content_margin": [0, 0]
     },
-    // Sidebar folder toggled closed
+    // Sidebar folder closed
     {
         "class": "disclosure_button_control",
         "content_margin": [8, 8],
