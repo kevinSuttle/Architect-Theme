@@ -183,12 +183,10 @@
             <string>constant.numeric, constant</string>
             <key>settings</key>
             <dict>
-                <key>background</key>
-                <string>#F3F2FF</string>
                 <key>fontStyle</key>
                 <string></string>
                 <key>foreground</key>
-                <string>#7653C1</string>
+                <string>#1a1a1a</string>
             </dict>
         </dict>
         <dict>

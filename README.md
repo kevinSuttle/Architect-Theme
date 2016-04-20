@@ -1,7 +1,7 @@
 # Architect-Theme
-UI themes inspired by [iA Writer](https://ia.net/writer/mac/)
+UI themes and color schemes inspired by [iA Writer](https://ia.net/writer/mac/)
 
-Recommended Sublime Text settings:
+## Recommended Sublime Text settings:
 ```json
 {
 	"bold_folder_labels": true,
@@ -23,7 +23,8 @@ Recommended Sublime Text settings:
 		".git",
 		"node_modules"
 	],
-	"font_face": "Cousine",
+	"font_face": "Input Mono",
+	// [Input Mono preview and config](http://input.fontbureau.com/preview/?size=14&language=javascript&theme=base16-light&family=InputMono&width=400&weight=300&line-height=1.3&a=0&g=0&i=serif&l=serifs_round&zero=0&asterisk=height&braces=0&preset=default&customize=please)
 	"font_options":
 	[
 		"subpixel_antialias"
@@ -55,3 +56,10 @@ Recommended Sublime Text settings:
 	"word_wrap": true
 }
 ```
+
+## Recommended Sublime Text Plug-ins
+- [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
+- [TrailingSpaces](https://packagecontrol.io/packages/TrailingSpaces)
+- [EditorConfig](https://packagecontrol.io/packages/EditorConfig)
+- [GitIgnore](https://packagecontrol.io/packages/Gitignore)
+

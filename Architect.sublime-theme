@@ -2,14 +2,14 @@
     {
         "class": "tabset_control",
         "layer0.texture": "",
-        "layer0.tint": [210,210,210],
+        "layer0.tint": [234,234,234],
         "layer0.inner_margin": 2, // Overlay light puck (for dark content)
         "layer0.opacity": 1,
         "content_margin": [0,0,0,0],
         "tab_overlap": 0,
         "tab_width": 140,
         "tab_min_width": 50,
-        "tab_height": 40,
+        "tab_height": 46,
         "mouse_wheel_switch": false
     },
     // Tab element
@@ -28,7 +28,7 @@
         "class": "tab_control",
         "attributes": ["selected"],
         "layer0.tint": [255,255,255],
-        "layer0.texture": "Theme - Architect/assets/tab-bar-active@2x.png"
+        "layer0.texture": "Architect-Theme/assets/tab-bar-active@2x.png"
     },
     {
         "class": "tab_label",
@@ -40,33 +40,44 @@
     {
         "class": "tab_close_button",
         "parents": [{"class": "tab_control", "attributes": ["dirty"]}],
-        "layer0.texture": "Theme - Architect/assets/tab-dirty@2x.png"
+        "layer0.texture": "Architect-Theme/assets/tab-dirty@2x.png"
     },
     // Sidebar
     {
         "class": "sidebar_container",
-        "layer0.texture": "Theme - Architect/assets/sidebar-bg@2x.png",
+        //"layer0.tint": [247, 247, 247],
+        "layer0.texture": "Architect-Theme/assets/sidebar-bg@2x.png",
+        "layer0.opacity": 1.0,
         "layer0.inner_margin": [1, 1, 2, 1],
         "content_margin": [0, 0, 1, 0]
     },
+     // Sidebar tree
+     // Basically, this is the container for all the content in the sidebar
+    {
+        "class": "sidebar_tree",
+        "row_padding": [10, 10, 10, 20],
+        "indent": 15,
+        "indent_offset": 15,
+        "indent_top_level": false
+    },
+    // Sidebar group heading label:
+    // e.g. OPEN FILES
+    //      FOLDERS
+    {
+        "class": "sidebar_heading",
+        "font.size": 12,
+        "color": [142, 142, 142],
+        "font.face": "SF UI Text",
+        "font.bold": false
+    },
+    // Sidebar folder and file labels
     {
         "class": "sidebar_label",
         "font.face": "SF UI Text",
         "font.size": 13,
         "color": [124, 124, 124]
     },
-    {
-     "class": "sidebar_tree",
-     "row_padding": [10, 10]
-    },
-    {
-        "class": "sidebar_heading",
-        "font.size": 11,
-        "color": [142, 142, 142],
-        "font.face": "SF UI Text",
-        "font.bold": false
-    },
-    // Sidebar folder label
+    // Just the sidebar folder labels
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row","attributes": ["expandable"]}],
@@ -74,16 +85,29 @@
         "font.bold": true,
         "color": [82, 82, 82],
     },
-    // Sidebar row selected
+    // Just the sidebar folder labels
+    {
+        "class": "sidebar_label",
+        "font.bold": false,
+        "color": [82, 82, 82],
+    },
+    // Sidebar row
+     {
+        "class": "tree_row",
+        "layer0.tint": [247, 247, 247],
+        "layer0.opacity": 1.0,
+        "layer0.texture": "",
+        "layer0.inner_margin": [8,3],
+        "layer1.opacity": 0.0
+    },
     {
         "class": "tree_row",
         "attributes": ["selected"],
-        "layer0.tint": [252, 252, 252],
-        "layer0.texture": "Theme - Architect/assets/tree-row-active@2x.png",
+        "layer0.tint": [247, 247, 247],
         "layer0.opacity": 1.0,
+        "layer0.texture": "Architect-Theme/assets/tree-row-active@2x.png",
         "layer0.inner_margin": [8,3],
-        "layer1.opacity": 0.0,
-        "layer1.inner_margin": [8, 3]
+        "layer1.opacity": 0.0
     },
     {
         "class": "sidebar_label",
@@ -96,6 +120,12 @@
         "font.bold": true,
         "color": [15, 15, 15]
     },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "tree_row","attributes": ["selected", "hover"]}],
+        "font.bold": true,
+        "color": [33, 194, 245],
+    },
     // Sidebar folder closed
       {
         "class": "icon_folder",
@@ -103,73 +133,78 @@
         "layer0.opacity": 0.0,
         "content_margin": [0, 0]
     },
-    // Sidebar group closed
+    // Sidebar folder toggled closed
     {
         "class": "disclosure_button_control",
         "content_margin": [8, 8],
-        "layer0.texture": "Theme - Architect/assets/group-closed@2x.png",
+        "layer0.texture": "Architect-Theme/assets/group-closed@2x.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": 0
     },
     {
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "layer0.texture": "Theme - Architect/assets/group-closed-hover@2x.png"
+        "layer0.texture": "Architect-Theme/assets/group-closed-hover@2x.png"
     },
-
-    // Sidebar file close
+    // Sidebar file close button
     {
         "class": "close_button",
-        "layer0.texture": "Theme - Architect/assets/file-close@2x.png",
+        "layer0.texture": "Architect-Theme/assets/file-close@2x.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": 0,
-        "content_margin": [8, 8, ]
+        "content_margin": [8, 8]
     },
     {
         "class": "close_button",
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
         "layer0.opacity": 1.0,
-        "layer0.texture": "Theme - Architect/assets/file-close-hover@2x.png",
+        "layer0.texture": "Architect-Theme/assets/file-close-hover@2x.png",
     },
     {
         "class": "close_button",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
         "layer0.opacity": 1.0,
-        "layer0.texture": "Theme - Architect/assets/file-close-selected@2x.png",
+        "layer0.texture": "Architect-Theme/assets/file-close@2x.png",
     },
     {
         "class": "close_button",
-        "parents": [{"class": "tree_row", "attributes": ["selected"]}],
+        "parents": [{"class": "tree_row", "attributes": ["hover"]}],
         "layer0.opacity": 1.0,
-        "layer0.texture": "Theme - Architect/assets/file-close-hover@2x.png",
+        "layer0.texture": "Architect-Theme/assets/file-close-hover@2x.png",
     },
-     // Sidebar group open
+     // Sidebar folder open
     {
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
-        "layer0.texture": "Theme - Architect/assets/group-open@2x.png"
+        "layer0.texture": "Architect-Theme/assets/group-open@2x.png"
     },
     {
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row", "attributes": ["hover"]}],
-        "layer0.texture": "Theme - Architect/assets/group-open-hover@2x.png"
+        "layer0.texture": "Architect-Theme/assets/group-open-hover@2x.png"
     },
     {
         "class": "disclosure_button_control",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.texture": "Theme - Architect/assets/group-closed-selected@2x.png"
+        "layer0.texture": "Architect-Theme/assets/group-closed-selected@2x.png"
     },
     {
         "class": "disclosure_button_control",
         "attributes": ["expanded"],
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "layer0.texture": "Theme - Architect/assets/group-open-selected@2x.png"
+        "layer0.texture": "Architect-Theme/assets/group-open@2x.png"
+    },
+    {
+        "class": "disclosure_button_control",
+        "attributes": ["expanded"],
+        "parents": [{"class": "tree_row", "attributes": ["selected", "hover"]}],
+        "layer0.texture": "Architect-Theme/assets/group-open-hover@2x.png"
     },
     // Status bar container
     {
         "class": "status_bar",
-        "layer0.texture": "Theme - Architect/assets/status-bar-background@2x.png",
+        "layer0.texture": "Architect-Theme/assets/status-bar-background.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [2, 2],
         "content_margin": [8, 4, 8, 4]
@@ -202,7 +237,7 @@
     // Bottom panel background
     {
         "class": "panel_control",
-        "layer0.texture": "Theme - Architect/assets/panel-background.png",
+        "layer0.texture": "Architect-Theme/assets/panel-background.png",
         "layer0.inner_margin": [2, 2, 2, 2],
         "layer0.opacity": 1.0,
         "content_margin": [2, 3, 2, 1]
@@ -211,10 +246,10 @@
     {
         "class": "overlay_control",
         "settings": ["!soda_retina_fix"],
-        "layer0.texture": "Theme - Architect/assets/quick-panel-background.png",
+        "layer0.texture": "Architect-Theme/assets/quick-panel-background.png",
         "layer0.inner_margin": [12, 6, 12, 15],
         "layer0.opacity": 1.0,
-        "layer1.texture": "Theme - Architect/assets/quick-panel-sections.png",
+        "layer1.texture": "Architect-Theme/assets/quick-panel-sections.png",
         "layer1.inner_margin": [12, 40, 12, 19],
         "layer1.opacity": 1.0,
         "content_margin": [11, 8, 11, 17]
@@ -240,14 +275,14 @@
     },
     {
         "class": "quick_panel_row",
-        "layer0.texture": "Theme - Architect/assets/quick-panel-row.png",
+        "layer0.texture": "Architect-Theme/assets/quick-panel-row.png",
         "layer0.inner_margin": [2, 2, 2, 2],
         "layer0.opacity": 1.0
     },
     {
         "class": "quick_panel_row",
         "attributes": ["selected"],
-        "layer0.texture": "Theme - Architect/assets/quick-panel-row-selected.png"
+        "layer0.texture": "Architect-Theme/assets/quick-panel-row-selected.png"
     },
     {
         "class": "quick_panel_label",
